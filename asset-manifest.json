@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0301c3c1.css",
-    "main.js": "/static/js/main.41056a71.js",
-    "static/js/496.66581cac.chunk.js": "/static/js/496.66581cac.chunk.js",
-    "static/media/elaine.jpg": "/static/media/elaine.0ce7c4ba269ed89279b4.jpg",
-    "static/media/elaine2.jpg": "/static/media/elaine2.53d44e8897a7f8b7e4d5.jpg",
-    "static/media/elaine3.jpg": "/static/media/elaine3.e5de91e5fa5348b9b799.jpg",
-    "static/media/handjet.ttf": "/static/media/handjet.48984a8b123eda64c076.ttf",
-    "index.html": "/index.html",
-    "main.0301c3c1.css.map": "/static/css/main.0301c3c1.css.map",
-    "main.41056a71.js.map": "/static/js/main.41056a71.js.map",
-    "496.66581cac.chunk.js.map": "/static/js/496.66581cac.chunk.js.map"
+    "main.css": "/elaine-phd/static/css/main.3e9d0a3f.css",
+    "main.js": "/elaine-phd/static/js/main.1530f04c.js",
+    "static/js/496.66581cac.chunk.js": "/elaine-phd/static/js/496.66581cac.chunk.js",
+    "static/media/elaine.jpg": "/elaine-phd/static/media/elaine.0ce7c4ba269ed89279b4.jpg",
+    "static/media/elaine2.jpg": "/elaine-phd/static/media/elaine2.53d44e8897a7f8b7e4d5.jpg",
+    "static/media/elaine3.jpg": "/elaine-phd/static/media/elaine3.e5de91e5fa5348b9b799.jpg",
+    "static/media/handjet.ttf": "/elaine-phd/static/media/handjet.48984a8b123eda64c076.ttf",
+    "index.html": "/elaine-phd/index.html",
+    "main.3e9d0a3f.css.map": "/elaine-phd/static/css/main.3e9d0a3f.css.map",
+    "main.1530f04c.js.map": "/elaine-phd/static/js/main.1530f04c.js.map",
+    "496.66581cac.chunk.js.map": "/elaine-phd/static/js/496.66581cac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0301c3c1.css",
-    "static/js/main.41056a71.js"
+    "static/css/main.3e9d0a3f.css",
+    "static/js/main.1530f04c.js"
   ]
 }
