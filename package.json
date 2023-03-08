@@ -1,7 +1,7 @@
 {
   "name": "elaine-poster",
   "version": "0.1.0",
-  "homepage": "https://vidgi.github.io/elaine-phd",
+  "homepage": "https://vidgi.github.io/elaine-poster",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.57.0",
