@@ -11,6 +11,8 @@ illustration by
 code adapted from
 
 - [wrongakram](https://github.com/wrongakram/R3F-Shader)
+- [ocean three.js example](https://threejs.org/examples/webgl_shaders_ocean.html)
+- [this post](https://stackoverflow.com/questions/67611934/how-to-create-water-in-react-three-fiber)
 
 packages:
 
@@ -19,4 +21,7 @@ packages:
 - @react-three/drei
 - glsl
 
+future ideas:
 
+- elaine's field photos appear
+- clicking background changes, camera angle changes

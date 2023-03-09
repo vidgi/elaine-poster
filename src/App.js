@@ -1,11 +1,11 @@
 import * as THREE from "three";
 import React, { useRef, Suspense } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
-import { Html, shaderMaterial, OrbitControls } from "@react-three/drei";
+import { Html, shaderMaterial, OrbitControls, Sky } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 import "./App.css";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-
+import Ocean from "./Ocean";
+// import { Leva, useControls } from "leva";
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
@@ -105,9 +105,49 @@ const Wave3 = () => {
 };
 
 const Scene = () => {
+  // const config = useControls({
+  //   turbidity: { value: 5, min: 0.1, max: 100, step: 0.1 },
+  //   rayleigh: { value: 1, min: 1, max: 20, step: 1 },
+  //   mieCoefficient: { value: 0.01, min: 0, max: 1, step: 0.005 },
+  //   mieDirectionalG: { value: 0.8, min: 0, max: 10, step: 0.1 },
+  //   inclination: { value: 2, min: 0.1, max: 10, step: 0.01 },
+  //   azimuth: { value: 0.25, min: 0.1, max: 1, step: 0.01 },
+  //   sunPosition: {
+  //     value: [100, 20, 100],
+  //     step: 1000,
+  //   },
+  // });
   return (
-    <Canvas camera={{ fov: 12, position: [0, 0, 5] }}>
+    <Canvas camera={{ fov: 12, position: [5, 0.5, 7] }}>
       <Suspense fallback={null}>
+        <pointLight position={[10, 10, 10]} />
+        <pointLight position={[-10, 10, 10]} />
+        <pointLight position={[-10, 10, -10]} />
+        <pointLight position={[-10, -10, -10]} />
+        <pointLight position={[10, -10, 10]} />
+        {/* <Sky {...config} /> */}
+
+        {/* <Sky
+          sunPosition={[-4500, 4, -5000]}
+          inclination={2.98}
+          azimuth={0.23}
+          mieDirectionalG={1.2}
+          mieCoefficient={0}
+          rayleigh={3}
+          turbidity={6.7}
+        /> */}
+
+        <Sky
+          sunPosition={[-5500, 200, -10000]}
+          inclination={2.98}
+          azimuth={0.23}
+          mieDirectionalG={1.2}
+          mieCoefficient={0}
+          rayleigh={1}
+          turbidity={6.7}
+        />
+
+        <Ocean />
         <Wave />
         <Wave2 />
         <Wave3 />
@@ -131,12 +171,12 @@ const Scene = () => {
         </Html>
 
         <OrbitControls
-          minDistance={5}
-          maxDistance={10}
+          minDistance={2}
+          maxDistance={15}
           maxAzimuthAngle={Math.PI / 3}
-          maxPolarAngle={Math.PI}
+          maxPolarAngle={Math.PI / 2}
           minAzimuthAngle={-Math.PI / 3}
-          minPolarAngle={0}
+          minPolarAngle={Math.PI / 6}
         />
       </Suspense>
     </Canvas>
