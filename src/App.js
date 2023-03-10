@@ -1,11 +1,33 @@
 import * as THREE from "three";
 import React, { useRef, Suspense } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
-import { Html, shaderMaterial, OrbitControls, Sky } from "@react-three/drei";
+import { Html, shaderMaterial, OrbitControls, Sky, Loader } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 import "./App.css";
 import Ocean from "./Ocean";
+import VidyaIcon from "@mui/icons-material/AutoAwesome";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Button, Tooltip } from "@mui/material";
+
 // import { Leva, useControls } from "leva";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: "#ffffff",
+      main: "#ffffff",
+      dark: "#000000",
+      contrastText: "#fff",
+    },
+  },
+  typography: {
+    fontFamily: `"Courier", "Arial", monospace`,
+  },
+  card: {
+    backgroundColor: "#c5ccb6 !important",
+  },
+});
+
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
@@ -188,7 +210,25 @@ const App = () => {
   return (
     <>
       <div className="App" style={{ height: "100vh", width: "100vw" }}>
-        <Scene />
+        <ThemeProvider theme={theme}>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0em",
+              right: "0em",
+              zIndex: "10000",
+            }}
+          >
+            <Tooltip title="made by vidya giri">
+              <Button target="_blank" rel="noreferrer" href="https://vidyagiri.com">
+                <VidyaIcon />
+              </Button>
+            </Tooltip>
+          </div>
+
+          <Scene />
+          <Loader />
+        </ThemeProvider>
       </div>
     </>
   );
