@@ -118,7 +118,7 @@ const Scene = () => {
   //   },
   // });
   return (
-    <Canvas camera={{ fov: 12, position: [5, 0.5, 7] }}>
+    <Canvas camera={{ fov: 12, position: [5, 0.6, 15] }}>
       <Suspense fallback={null}>
         <pointLight position={[10, 10, 10]} />
         <pointLight position={[-10, 10, 10]} />
@@ -138,7 +138,7 @@ const Scene = () => {
         /> */}
 
         <Sky
-          sunPosition={[-5500, 200, -10000]}
+          sunPosition={[-3200, 200, -10000]}
           inclination={2.98}
           azimuth={0.23}
           mieDirectionalG={1.2}
@@ -171,8 +171,9 @@ const Scene = () => {
         </Html>
 
         <OrbitControls
+          enablePan={false}
           minDistance={2}
-          maxDistance={15}
+          maxDistance={40}
           maxAzimuthAngle={Math.PI / 3}
           maxPolarAngle={Math.PI / 2}
           minAzimuthAngle={-Math.PI / 3}
