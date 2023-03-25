@@ -9,10 +9,7 @@ extend({ Water });
 function Ocean() {
   const ref = useRef();
   const gl = useThree((state) => state.gl);
-  const waterNormals = useLoader(
-    THREE.TextureLoader,
-    "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/waternormals.jpg"
-  );
+  const waterNormals = useLoader(THREE.TextureLoader, require("./waternormals.jpg"));
 
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping;
   const geom = useMemo(() => new THREE.PlaneGeometry(30000, 30000), []);
