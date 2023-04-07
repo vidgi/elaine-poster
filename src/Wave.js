@@ -11,7 +11,7 @@ export function Wave(props) {
   const [image] = useLoader(THREE.TextureLoader, props.file);
 
   return (
-    <mesh position={[props.position, 0, 0]}>
+    <mesh position={props.position}>
       <planeGeometry args={props.planeGeometryArgs} />
       <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image} />
     </mesh>

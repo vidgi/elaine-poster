@@ -3,7 +3,7 @@ import { Loader } from "@react-three/drei";
 import "./App.css";
 import { Scene } from "./Scene";
 import VidyaIcon from "@mui/icons-material/AutoAwesome";
-import CameraIcon from "@mui/icons-material/PhotoCamera";
+// import CameraIcon from "@mui/icons-material/PhotoCamera";
 import { CameraFiles } from "./CameraFiles";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -27,19 +27,20 @@ const theme = createTheme({
 });
 
 const App = () => {
-  var photoData = shuffle(CameraFiles);
-  var photoData = CameraFiles;
-  const [allPhotos, setAllPhotos] = useState(photoData);
-  const [visiblePhotos, setVisiblePhotos] = useState([]);
-  function revealPhoto() {
-    var currentVisible = visiblePhotos;
-    var currentAll = allPhotos;
-    if (allPhotos.length > 0) {
-      var toAdd = currentAll.pop();
-      setAllPhotos(currentAll);
-      setVisiblePhotos(currentVisible.concat([toAdd]));
-    }
-  }
+  var photoData = shuffle(CameraFiles).slice(0, 50);
+
+  // var photoData = CameraFiles;
+  const [allPhotos] = useState(photoData);
+  // const [visiblePhotos, setVisiblePhotos] = useState([]);
+  // function revealPhoto() {
+  //   var currentVisible = visiblePhotos;
+  //   var currentAll = allPhotos;
+  //   if (allPhotos.length > 0) {
+  //     var toAdd = currentAll.pop();
+  //     setAllPhotos(currentAll);
+  //     setVisiblePhotos(currentVisible.concat([toAdd]));
+  //   }
+  // }
 
   return (
     <>
@@ -60,7 +61,7 @@ const App = () => {
             </Tooltip>
           </div>
 
-          <div
+          {/* <div
             style={{
               position: "absolute",
               top: "0em",
@@ -73,10 +74,13 @@ const App = () => {
                 <CameraIcon />
               </Button>
             </Tooltip>
-          </div>
+          </div> */}
 
-          <Scene allPhotos={allPhotos} visiblePhotos={visiblePhotos} />
-          {/* <Loader /> */}
+          <Scene
+            allPhotos={allPhotos}
+            // visiblePhotos={visiblePhotos}
+          />
+          <Loader />
         </ThemeProvider>
       </div>
     </>
