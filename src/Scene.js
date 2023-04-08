@@ -34,14 +34,14 @@ export function Scene(props) {
               <Wave
                 key={index}
                 file={item.file}
-                position={[Math.random() * 10 - 5, Math.random() * 2, Math.random() * 2 - 1]}
-                planeGeometryArgs={[0.5, 0.5 * (4 / 6), 16, 16]}
+                position={[Math.random() * 5 - 2.5, Math.random() * 2, Math.random()]}
+                planeGeometryArgs={[0.6, 0.6 * (4 / 6), 16, 16]}
               />
             ) : (
               <Wave
                 key={index}
                 file={item.file}
-                position={[Math.random() * 10 - 5, Math.random() * 2, Math.random()]}
+                position={[Math.random() * 5 - 2.5, Math.random() * 2, Math.random()]}
                 planeGeometryArgs={[0.5, 0.5 * (6 / 4), 16, 16]}
               />
             )

@@ -27,7 +27,7 @@ const theme = createTheme({
 });
 
 const App = () => {
-  var photoData = shuffle(CameraFiles).slice(0, 50);
+  var photoData = shuffle(CameraFiles).slice(0, 25);
 
   // var photoData = CameraFiles;
   const [allPhotos] = useState(photoData);
