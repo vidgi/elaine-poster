@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elaine-poster/static/css/main.9d2ac73c.css",
-    "main.js": "/elaine-poster/static/js/main.9ecc972a.js",
+    "main.css": "/elaine-poster/static/css/main.c33966ff.css",
+    "main.js": "/elaine-poster/static/js/main.3216ea5a.js",
     "static/js/496.1df92b64.chunk.js": "/elaine-poster/static/js/496.1df92b64.chunk.js",
     "static/media/elaine.jpg": "/elaine-poster/static/media/elaine.c2e43d14236287729732.jpg",
     "static/media/elaine2.jpg": "/elaine-poster/static/media/elaine2.ea8946b8ccb2fbad17a0.jpg",
@@ -166,12 +166,12 @@
     "static/media/IMG_0177.jpeg": "/elaine-poster/static/media/IMG_0177.5c14e7ef8455262c4d08.jpeg",
     "static/media/IMG_0236.jpeg": "/elaine-poster/static/media/IMG_0236.92936e50fc138993ad13.jpeg",
     "index.html": "/elaine-poster/index.html",
-    "main.9d2ac73c.css.map": "/elaine-poster/static/css/main.9d2ac73c.css.map",
-    "main.9ecc972a.js.map": "/elaine-poster/static/js/main.9ecc972a.js.map",
+    "main.c33966ff.css.map": "/elaine-poster/static/css/main.c33966ff.css.map",
+    "main.3216ea5a.js.map": "/elaine-poster/static/js/main.3216ea5a.js.map",
     "496.1df92b64.chunk.js.map": "/elaine-poster/static/js/496.1df92b64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d2ac73c.css",
-    "static/js/main.9ecc972a.js"
+    "static/css/main.c33966ff.css",
+    "static/js/main.3216ea5a.js"
   ]
 }
